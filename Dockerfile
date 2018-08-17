@@ -1,6 +1,6 @@
 FROM python:3-stretch
 RUN apt-get -y update && apt-get -y install less ssl-cert vim
-RUN pip3 install --upgrade jupyter matplotlib seaborn numpy pandas scipy scikit-learn line_profiler memory_profiler
+RUN pip3 install --upgrade jupyter matplotlib seaborn numpy pandas scipy scikit-learn line_profiler memory_profiler pygal
 RUN mkdir -p /root/jupyter
 RUN jupyter notebook --generate-config -y
 ARG PASSWORD=DEFAULTPASSWORD
